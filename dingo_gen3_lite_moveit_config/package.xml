@@ -1,6 +1,6 @@
 <package>
 
-  <name>dingo_kinova_moveit_config</name>
+  <name>dingo_gen3_lite_moveit_config</name>
   <version>0.3.0</version>
   <description>
      An automatically generated package with all the configuration and launch files for using the dingo with the MoveIt! Motion Planning Framework

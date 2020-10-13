@@ -2,37 +2,32 @@
 # Specific joint properties can be changed with the keys [max_position, min_position, max_velocity, max_acceleration]
 # Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
 joint_limits:
-  kinova_arm_joint_1:
+  arm_joint_1:
     has_velocity_limits: true
     max_velocity: 0.3
     has_acceleration_limits: true
     max_acceleration: 0.15
-  kinova_arm_joint_2:
+  arm_joint_2:
     has_velocity_limits: true
     max_velocity: 0.3
     has_acceleration_limits: true
     max_acceleration: 0.15
-  kinova_arm_joint_3:
+  arm_joint_3:
     has_velocity_limits: true
     max_velocity: 0.3
     has_acceleration_limits: true
     max_acceleration: 0.15
-  kinova_arm_joint_4:
+  arm_joint_4:
     has_velocity_limits: true
     max_velocity: 0.3
     has_acceleration_limits: true
     max_acceleration: 0.15
-  kinova_arm_joint_5:
+  arm_joint_5:
     has_velocity_limits: true
     max_velocity: 0.3
     has_acceleration_limits: true
     max_acceleration: 0.15
-  kinova_arm_joint_6:
-    has_velocity_limits: true
-    max_velocity: 0.3
-    has_acceleration_limits: true
-    max_acceleration: 0.15
-  kinova_arm_joint_7:
+  arm_joint_6:
     has_velocity_limits: true
     max_velocity: 0.3
     has_acceleration_limits: true

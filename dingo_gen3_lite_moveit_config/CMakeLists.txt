@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(dingo_kinova_moveit_config)
+project(dingo_gen3_lite_moveit_config)
 
 find_package(catkin REQUIRED)
 

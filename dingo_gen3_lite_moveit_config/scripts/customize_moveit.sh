@@ -6,9 +6,9 @@ then
   cd "$1"
 
   echo "Copying Gen3 Moveit Config"
-  cp -r $(catkin_find dingo_kinova_moveit_config)/. .
+  cp -r $(catkin_find dingo_gen3_lite_moveit_config)/. .
   echo "Updating Package"
-  grep -rli 'dingo_kinova_moveit_config' * | xargs -i@ sed -i 's/dingo_kinova_moveit_config/'$1'/g' @
+  grep -rli 'dingo_gen3_lite_moveit_config' * | xargs -i@ sed -i 's/dingo_gen3_lite_moveit_config/'$1'/g' @
   echo "Done"
 
 else

@@ -12,7 +12,7 @@
 
   <exec_depend>dingo_kinova_description</exec_depend>
   <exec_depend>dingo_kinova_bringup</exec_depend>
-  <exec_depend>dingo_kinova_moveit_config</exec_depend>
+  <exec_depend>dingo_gen3_lite_moveit_config</exec_depend>
 
   <export>
     <metapackage />
