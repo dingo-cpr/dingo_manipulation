@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: dingo_description
+    relative_path: urdf/dingo.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/dingo.srdf
+  CONFIG:
+    author_name: Dave Niewinski
+    author_email: dniewinskI@clearpathrobotics.com
+    generated_timestamp: 1587052751

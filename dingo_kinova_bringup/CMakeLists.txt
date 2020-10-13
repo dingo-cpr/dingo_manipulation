@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(dingo_kinova_bringup)
+
+find_package(catkin REQUIRED)
+
+catkin_package()
+
+if (CATKIN_ENABLE_TESTING)
+  find_package(roslaunch REQUIRED)
+  roslaunch_add_file_check(launch/kinova_robot.launch)
+  roslaunch_add_file_check(launch/ridgeback_gen3_lite_bringup.launch)
+endif()
+
+install(DIRECTORY launch
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)

@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+export DINGO_URDF_EXTRAS=$(catkin_find dingo_kinova_description urdf/dingo_gen3_lite_description.urdf.xacro --first-only)

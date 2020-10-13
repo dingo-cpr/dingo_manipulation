@@ -1,7 +1,7 @@
 # Dingo Manipulation
-The purpose of this package is to make integration of manipulators much simpler.  Currently this package only includes Gen3 Light integrations, but supported manipulators will be expanded over time.
+The purpose of this package is to make integration of manipulators much simpler.  Currently this package only includes Gen3 Lite integrations, but supported manipulators will be expanded over time.
 
-This doc will cover the setup for a single Gen3 Light Dingo.  Both Dingo-D and Dingo-O platforms are supported, though the process is identical for other arms, just with different package names as-necessary.
+This doc will cover the setup for a single Gen3 Lite Dingo.  Both Dingo-D and Dingo-O platforms are supported, though the process is identical for other arms, just with different package names as-necessary.
 
 ## Cloning
 To clone this repository and all necessary dependencies:
@@ -11,7 +11,7 @@ git clone https://github.com/dingo-cpr/dingo_manipulation.git --recursive
 ```
 
 ## URDF
-In your URDF, make sure to include the dingo_manipulation description that you want. For example, if you are using a single Gen3 Light, make sure to include the line below in your URDF:
+In your URDF, make sure to include the dingo_manipulation description that you want. For example, if you are using a single Gen3 Lite, make sure to include the line below in your URDF:
 
 ```
 <xacro:include filename="$(find dingo_gen3_description)/urdf/dingo_gen3_description.urdf.xacro" />
