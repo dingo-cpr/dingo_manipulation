@@ -5,8 +5,8 @@
   <description>
      An automatically generated package with all the configuration and launch files for using the dingo with the MoveIt! Motion Planning Framework
   </description>
-  <author email="civerachb@clearpathrobotics.com">Chris Iverach-Brereton</author>
-  <maintainer email="dniewinski@clearpathrobotics.com">Dave Niewinski</maintainer>
+  <author email="dniewinskI@clearpathrobotics.com">Dave Niewinski</author>
+  <maintainer email="dniewinskI@clearpathrobotics.com">Dave Niewinski</maintainer>
 
   <license>BSD</license>
 
@@ -24,11 +24,11 @@
   <run_depend>moveit_setup_assistant</run_depend>
   <run_depend>joint_state_publisher</run_depend>
   <run_depend>robot_state_publisher</run_depend>
+  <run_depend>tf2_ros</run_depend>
   <run_depend>xacro</run_depend>
   <!-- This package is referenced in the warehouse launch files, but does not build out of the box at the moment. Commented the dependency until this works. -->
   <!-- <run_depend>warehouse_ros_mongo</run_depend> -->
-  <build_depend>dingo_description</build_depend>
-  <run_depend>dingo_description</run_depend>
+    <run_depend>dingo_description</run_depend>
 
 
 </package>
