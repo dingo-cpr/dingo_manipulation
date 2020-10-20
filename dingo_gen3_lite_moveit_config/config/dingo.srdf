@@ -10,6 +10,21 @@
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
     <group name="manipulator">
+        <link name="arm_base_link" />
+        <link name="arm_shoulder_link" />
+        <link name="arm_arm_link" />
+        <link name="arm_forearm_link" />
+        <link name="arm_lower_wrist_link" />
+        <link name="arm_upper_wrist_link" />
+        <link name="arm_end_effector_link" />
+        <joint name="arm_joint_1" />
+        <joint name="arm_joint_2" />
+        <joint name="arm_joint_3" />
+        <joint name="arm_joint_4" />
+        <joint name="arm_joint_5" />
+        <joint name="arm_joint_6" />
+        <joint name="arm_end_effector" />
+        <joint name="arm_mount_joint" />
         <chain base_link="arm_base_link" tip_link="arm_end_effector_link" />
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
