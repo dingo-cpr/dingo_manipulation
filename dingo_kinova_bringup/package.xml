@@ -10,10 +10,9 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <exec_depend>kinova_driver</exec_depend>
   <exec_depend>topic_tools</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
-  <exec_depend>dingo_manipulation_description</exec_depend>
+  <exec_depend>dingo_kinova_description</exec_depend>
   <exec_depend>kortex_driver</exec_depend>
 
   <test_depend>roslaunch</test_depend>

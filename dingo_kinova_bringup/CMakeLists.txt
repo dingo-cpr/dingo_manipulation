@@ -8,7 +8,7 @@ catkin_package()
 if (CATKIN_ENABLE_TESTING)
   find_package(roslaunch REQUIRED)
   roslaunch_add_file_check(launch/kinova_robot.launch)
-  roslaunch_add_file_check(launch/ridgeback_gen3_lite_bringup.launch)
+  roslaunch_add_file_check(launch/dingo_gen3_lite_bringup.launch)
 endif()
 
 install(DIRECTORY launch
