@@ -7,7 +7,7 @@
   <arg name="vision" default="$(optenv DINGO_ARM_VISION true)"/>
 
   <!-- Gripper configuration -->
-  <arg name="gripper" default="$(optenv DINGO_ARM_GRIPPER )"/>
+  <arg name="gripper" default="$(optenv DINGO_ARM_GRIPPER gen3_lite_2f)"/>
 
   <!-- Kortex API options -->
   <arg name="use_hard_limits" default="false"/>
