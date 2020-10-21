@@ -4,7 +4,7 @@
   <xacro:arg name="dof" default="$(optenv DINGO_ARM_DOF 6)" />
   <xacro:arg name="vision" default="$(optenv DINGO_ARM_VISION true)" />
 
-  <xacro:arg name="gripper" default="$(optenv DINGO_ARM_GRIPPER )" />
+  <xacro:arg name="gripper" default="$(optenv DINGO_ARM_GRIPPER gen3_lite_2f)" />
 
   <xacro:arg name="sim" default="$(optenv DINGO_ARM_SIM false)" />
   <xacro:arg name="prefix" default="$(optenv DINGO_ARM_PREFIX arm_)" />
