@@ -46,8 +46,8 @@
           <!-- If there is a gripper, load the active joint names for it -->
           <rosparam command="load" file="$(find kortex_description)/grippers/$(arg gripper)/config/joint_limits.yaml" unless="$(eval not arg('gripper'))" subst_value="true"/>
       </node>
-
-      <!-- Republish /arm/joint_states to /joint_states -->
-      <node name="joint_state_relay" type="relay" pkg="topic_tools" args="$(arg robot_name)/joint_states /joint_states" />
   </group>
+
+  <!-- Republish /arm/joint_states to /joint_states -->
+  <node name="joint_state_relay" type="relay" pkg="topic_tools" args="$(arg robot_name)/joint_states /joint_states" />
 </launch>
