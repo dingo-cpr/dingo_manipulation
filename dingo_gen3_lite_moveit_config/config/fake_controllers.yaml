@@ -9,4 +9,4 @@ controller_list:
       - arm_joint_6
 initial:  # Define initial robot poses.
   - group: manipulator
-    pose: home
+    pose: vertical

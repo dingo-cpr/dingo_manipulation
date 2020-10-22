@@ -1,8 +1,0 @@
-<launch>
-  <arg name="debug" default="false" />
-
-  <!-- Launch move group -->
-  <include file="$(find dingo_gen3_lite_moveit_config)/launch/move_group.launch">
-    <arg name="debug" default="$(arg debug)" />
-  </include>
-</launch>
