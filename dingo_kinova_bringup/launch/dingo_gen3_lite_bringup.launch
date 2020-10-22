@@ -49,5 +49,5 @@
   </group>
 
   <!-- Republish /arm/joint_states to /joint_states -->
-  <node name="joint_state_relay" type="relay" pkg="topic_tools" args="$(arg robot_name)/joint_states /joint_states" />
+  <node name="joint_state_relay" type="relay" pkg="topic_tools" args="/$(arg robot_name)/joint_states /joint_states" />
 </launch>
