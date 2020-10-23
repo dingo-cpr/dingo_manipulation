@@ -23,11 +23,11 @@
     </group_state>
     <group_state name="stow" group="manipulator">
         <joint name="arm_joint_1" value="0" />
-        <joint name="arm_joint_2" value="1.9766" />
-        <joint name="arm_joint_3" value="2.6306" />
-        <joint name="arm_joint_4" value="-1.531" />
-        <joint name="arm_joint_5" value="-0.9229" />
-        <joint name="arm_joint_6" value="1.531" />
+        <joint name="arm_joint_2" value="1.8" />
+        <joint name="arm_joint_3" value="2.06" />
+        <joint name="arm_joint_4" value="1.55" />
+        <joint name="arm_joint_5" value="1.33" />
+        <joint name="arm_joint_6" value="-1.55" />
     </group_state>
     <!--PASSIVE JOINT: Purpose: this element is used to mark joints that are not actuated-->
     <passive_joint name="left_wheel" />
