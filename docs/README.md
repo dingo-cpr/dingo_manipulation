@@ -3,6 +3,9 @@ The purpose of this package is to make integration of manipulators much simpler.
 
 This doc will cover the setup for a single Gen3 Lite Dingo.  Both Dingo-D and Dingo-O platforms are supported, though the process is identical for other arms, just with different package names as-necessary.
 
+## Additional Information
+Please see http://www.clearpathrobotics.com/assets/guides/melodic/dingo/manipulation.html for additional information on physically configuring Dingo for mobile manipulation.
+
 ## Cloning
 To clone this repository and all necessary dependencies:
 
@@ -53,8 +56,6 @@ That command will make a new moveit package in your src folder that should be re
 
 ### Customize Package
 
-*NOTE* - The following is not yet updated for Dingo!
-
 To customize the moveit config, run the command below:
 
 ```
@@ -102,9 +103,9 @@ When you select Configuration Files, you may get a warning about files changing.
 
 The next step will show you the list of files that the wizard is responsible for.  Make sure that nothing is selected except for:
 
-- Config/
-- Launch/
-- config/Husky.srdf
+- config/
+- launch/
+- config/dingo.srdf
 
 If you modified more than the sections outlined above, you may need to edit other files, but this may have other consequences.
 
@@ -119,7 +120,7 @@ There are 2 parts to working with this on the real robot:
 Assuming the robot is all started up and the arm is setup, you should be able to run
 
 ```
-roslaunch husky_ur_bringup husky_ur_bringup.launch
+roslaunch dingo_kinova_bringup dingo_gen3_lite_bringup.launch
 ```
 
 If that worked properly, you should see the arm positioned properly in RVIZ or you should see the UR joints being published on the /joint_states topic
@@ -128,7 +129,7 @@ If that worked properly, you should see the arm positioned properly in RVIZ or y
 MoveIt! is the planning and execution interface for the arm.  It runs separately from the driver.  Run the MoveIt! configuration you created above with
 
 ```
-roslaunch dummy_moveit_config husky_ur_moveit_planning_execution.launch
+roslaunch dummy_moveit_config dingo_gen3_lite_moveit_planning_execution.launch
 ```
 
 You should see no errors coming up in the terminal.  You should now be able to add the Moveit MotionPlanning plugin in RVIZ and command the arm around!
