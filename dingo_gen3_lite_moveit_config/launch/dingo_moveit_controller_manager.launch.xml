@@ -1,10 +1,16 @@
 <launch>
 
-  <!-- loads moveit_controller_manager on the parameter server which is taken as argument 
+  <!-- loads moveit_controller_manager on the parameter server which is taken as argument
     if no argument is passed, moveit_simple_controller_manager will be set -->
   <arg name="moveit_controller_manager" default="moveit_simple_controller_manager/MoveItSimpleControllerManager" />
   <param name="moveit_controller_manager" value="$(arg moveit_controller_manager)"/>
 
   <!-- loads ros_controllers to the param server -->
-  <rosparam file="$(find dingo_gen3_lite_moveit_config)/config/ros_controllers.yaml"/>
+  <!-- we have 2 versions, one for Dingo-D and one for Dingo-O, controlled by an envar -->
+  <group if="$(optenv DINGO_OMNI 0)">
+    <rosparam file="$(find dingo_gen3_lite_moveit_config)/config/dingo_o_controllers.yaml"/>
+  </group>
+  <group unless="$(optenv DINGO_OMNI 0)">
+    <rosparam file="$(find dingo_gen3_lite_moveit_config)/config/dingo_d_controllers.yaml"/>
+  </group>
 </launch>

@@ -9,7 +9,13 @@
   <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="xacro  '$(find dingo_description)/urdf/dingo.urdf.xacro'"/>
 
   <!-- The semantic description that corresponds to the URDF -->
-  <param name="$(arg robot_description)_semantic" textfile="$(find dingo_gen3_lite_moveit_config)/config/dingo.srdf" />
+  <!-- We have 2 versions, one for Dingo-D and one for Dingo-O, controlled by an envar -->
+  <group if="$(optenv DINGO_OMNI 0)">
+    <param name="$(arg robot_description)_semantic" textfile="$(find dingo_gen3_lite_moveit_config)/config/dingo_o.srdf" />
+  </group>
+  <group unless="$(optenv DINGO_OMNI 0)">
+    <param name="$(arg robot_description)_semantic" textfile="$(find dingo_gen3_lite_moveit_config)/config/dingo_d.srdf" />
+  </group>
 
   <!-- Load updated joint limits (override information from URDF) -->
   <group ns="$(arg robot_description)_planning">

@@ -2,7 +2,13 @@
 <launch>
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
-  <rosparam file="$(find dingo_gen3_lite_moveit_config)/config/ros_controllers.yaml" command="load"/>
+  <!-- we have 2 versions, one for Dingo-D and one for Dingo-O, controlled by an envar -->
+  <group if="$(optenv DINGO_OMNI 0)">
+    <rosparam file="$(find dingo_gen3_lite_moveit_config)/config/dingo_o_controllers.yaml"/>
+  </group>
+  <group unless="$(optenv DINGO_OMNI 0)">
+    <rosparam file="$(find dingo_gen3_lite_moveit_config)/config/dingo_d_controllers.yaml"/>
+  </group>
 
   <!-- Load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
