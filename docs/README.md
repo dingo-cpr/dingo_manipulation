@@ -17,13 +17,13 @@ git clone https://github.com/dingo-cpr/dingo_manipulation.git --recursive
 In your URDF, make sure to include the dingo_manipulation description that you want. For example, if you are using a single Gen3 Lite, make sure to include the line below in your URDF:
 
 ```
-<xacro:include filename="$(find dingo_gen3_description)/urdf/dingo_gen3_description.urdf.xacro" />
+<xacro:include filename="$(find dingo_kinova_description)/urdf/dingo_gen3_lite_description.urdf.xacro" />
 ```
 
 You will then want to export your URDF as the URDF_EXTRA for your robot.  This will "attach" it to the Dingo.  It's convenient to add all of these into a single shell script file that can be sourced later. Make sure to source the initial script as that will make sure to set any other necessary environment variables.
 
 ```
-source $(catkin_find dingo_gen3_description)/scripts/dingo_gen3_envar.sh
+source $(catkin_find dingo_kinova_description)/scripts/dingo_gen3_lite_envar
 export DINGO_URDF_EXTRAS=$(catkin_find your_description_package urdf/your_description.urdf.xacro --first-only)
 ```
 
@@ -49,7 +49,7 @@ The dingo_manipulation package has moveit configs setup already.  That config sh
 Go into the src folder in your workspace and run the command below:
 
 ```
-rosrun dingo_gen3_moveit_config customize_moveit.sh <new_package_name>
+rosrun dingo_gen3_lite_moveit_config customize_moveit.sh <new_package_name>
 ```
 
 That command will make a new moveit package in your src folder that should be ready for customization to your actual platform.
@@ -129,7 +129,7 @@ If that worked properly, you should see the arm positioned properly in RVIZ or y
 MoveIt! is the planning and execution interface for the arm.  It runs separately from the driver.  Run the MoveIt! configuration you created above with
 
 ```
-roslaunch dummy_moveit_config dingo_gen3_lite_moveit_planning_execution.launch
+roslaunch dingo_gen3_lite_moveit_config dingo_gen3_lite_moveit_planning_execution.launch
 ```
 
 You should see no errors coming up in the terminal.  You should now be able to add the Moveit MotionPlanning plugin in RVIZ and command the arm around!
