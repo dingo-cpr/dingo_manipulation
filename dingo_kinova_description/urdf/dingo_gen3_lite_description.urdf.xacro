@@ -7,7 +7,7 @@
   <xacro:arg name="gripper" default="$(optenv DINGO_ARM_GRIPPER gen3_lite_2f)" />
 
   <xacro:arg name="sim" default="$(optenv DINGO_ARM_SIM false)" />
-  <xacro:arg name="prefix" default="$(optenv DINGO_ARM_PREFIX arm_)" />
+  <xacro:arg name="prefix" default="$(optenv DINGO_ARM_PREFIX arm)_" />
 
   <xacro:include filename="$(find kortex_description)/robots/kortex_robot.xacro" />
   <xacro:load_robot arm="$(arg arm)" gripper="$(arg gripper)" dof="$(arg dof)" vision="$(arg vision)" sim="$(arg sim)" prefix="$(arg prefix)" />
