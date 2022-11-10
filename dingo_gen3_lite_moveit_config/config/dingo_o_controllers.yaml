@@ -37,3 +37,8 @@ controller_list:
       - arm_joint_4
       - arm_joint_5
       - arm_joint_6
+  - name: arm/arm_gen3_lite_2f_gripper_controller
+    action_ns: gripper_cmd
+    type: GripperCommand
+    joints:
+      - arm_right_finger_bottom_joint
